@@ -1,0 +1,96 @@
+{% extends "template.html" %}
+
+{% block title %}Base Conversion{% endblock %}
+
+{% block content %}
+<main class="frame">
+    <div class="header">
+        <h2>Covert number from any base to any base:</h2>
+        {% if message %}
+        <p style="color: red; margin-top:1rem">{{message}}</p>
+        {% endif %}
+    </div>
+
+    <div>
+        <form action="/base/result">
+            <div class="base_form ">
+                <label for="number">Enter Number</label>
+                <input type="text" name="number" id="number" required value={{number}}>
+                <label for="radix">From Base</label>
+                <select name="radix" id="radix">
+                    <option value="2">2(binary)</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8(octal)</option>
+                    <option value="9">9</option>
+                    <option value="10" selected>10(decimal)</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16(hex)</option>
+                </select>
+                <label for="convert">To Base</label>
+                <select name="convert" id="convert">
+                    <option value="2">2(binary)</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8(octal)</option>
+                    <option value="9">9</option>
+                    <option value="10">10(decimal)</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16" selected>16(hex)</option>
+                </select>
+                <div>
+                    <button type="submit">
+                        <pre><b>=</b>  Convert</pre>
+                    </button>
+                    <button type="button" id="reset">
+                        <pre><b>x</b>  Reset</pre>
+                    </button>
+                </div>
+                <label for="output">Result</label>
+                <input type="text" id="output" name="output" disabled value={{output}}>
+                <div>
+                    <button type="button" id="copy">Copy</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<!-- keep the values of radix and convert -->
+{% if radix or convert %}
+<script>
+    document.getElementById('radix').value = '{{radix}}';
+    document.getElementById('convert').value = '{{convert}}';
+</script>
+{% endif %}
+
+<!-- reset the values -->
+<script>
+    document.getElementById('reset').addEventListener('click', () => {
+        document.getElementById('number').value = "";
+        document.getElementById('radix').value = "10";
+        document.getElementById('convert').value = "16";
+        document.getElementById('output').value = "";
+    })
+    document.getElementById('copy').addEventListener('click', () => {
+        let text = document.getElementById('output').value;
+        if (text) {
+            navigator.clipboard.writeText(text);
+        }
+
+    })
+</script>
+{% endblock%}

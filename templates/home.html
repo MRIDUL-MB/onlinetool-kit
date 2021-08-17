@@ -1,0 +1,29 @@
+{% extends 'template.html' %}
+
+{% block title %}PDF Converter{% endblock %}
+
+{% block content%}
+<div class="header">
+    <h1>Convert Text to PDF</h1>
+</div>
+<div class="frame">
+    <div class="pdf_form">
+        <h3>Text to PDF</h3>
+        <form action="/download/pdf">
+            <textarea required name="text" id="text" cols="60" rows="20" wrap="hard"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <hr>
+    <div class="pdf_form">
+        <h3>Text file to PDF</h3>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="file" id="file-label">Select a file</label>
+            <input type="file" name="file" id="file" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}
