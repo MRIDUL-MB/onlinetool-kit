@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request
-from flask import send_from_directory
 from werkzeug.utils import secure_filename
 from library.pdf_converter import text_pdf, file_pdf
 from library.base import base_result, check
-import os
 
 app = Flask(__name__)
 
