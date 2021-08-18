@@ -160,7 +160,6 @@ prometheus-client==0.8.0
 prompt-toolkit==3.0.5
 psutil==5.7.0
 py @ file:///tmp/build/80754af9/py_1593446248552/work
-PyAudio @ file:///C:/Users/MRIDUL/pipwin/PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 PyAutoGUI==0.9.50
 pycodestyle==2.6.0
 pycosat==0.6.3
