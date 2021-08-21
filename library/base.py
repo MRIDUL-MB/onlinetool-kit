@@ -50,3 +50,23 @@ def base_result(num, radix, convert):
     # print(convert_to_base(decimal, convert))
 
     return convert_to_base(decimal, convert)
+
+
+def base_calculator(num1, num2, radix, operator):
+
+    result = ""
+
+    num1 = int(convert_to_decimal(num1, radix))
+    num2 = int(convert_to_decimal(num2, radix))
+
+    # calculator
+    if (operator == 'plus'):
+        result = num1 + num2
+    elif(operator == 'minus'):
+        result = num1 - num2
+    elif(operator == 'multiply'):
+        result = num1 * num2
+    elif(operator == 'divide'):
+        result = num1 / num2
+
+    return convert_to_base(result, radix)

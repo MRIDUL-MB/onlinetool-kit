@@ -1,7 +1,8 @@
+import re
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 from library.pdf_converter import text_pdf, file_pdf
-from library.base import base_result, check
+from library.base import base_result, check, base_calculator
 
 app = Flask(__name__)
 
@@ -44,6 +45,28 @@ def base_output():
     else:
         message = "Check the number and base"
     return render_template('base.html', number=number, message=message, radix=radix, convert=convert)
+
+
+@app.route('/base/calculator')
+def base_calculator_page():
+    return render_template('base_calculator.html')
+
+
+@app.route('/base/calculatorResult')
+def base_calculation():
+    number1 = request.args.get('number1')
+    num1 = list(number1.upper())
+    number2 = request.args.get('number2')
+    num2 = list(number2.upper())
+    radix = int(request.args.get('radix'))
+    operator = request.args.get('operator')
+
+    if check(num1, radix) and check(num2, radix):
+        output = base_calculator(num1, num2, radix, operator)
+        return render_template('base_calculator.html', output=output, number1=number1, number2=number2, radix=radix, operator=operator)
+    else:
+        message = "Check the number and base"
+    return render_template('base_calculator.html', message=message, number1=number1, number2=number2, radix=radix, operator=operator)
 
 
 if __name__ == '__main__':

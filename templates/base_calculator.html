@@ -1,0 +1,88 @@
+{% extends "template.html" %}
+
+{% block title %}Base Calculator{% endblock %}
+
+{% block content %}
+<main class="frame">
+    <div class="header">
+        <h2>Base Calculator</h2>
+        {% if message %}
+        <p style="color: red; margin-top:1rem">{{message}}</p>
+        {% endif %}
+    </div>
+
+    <div>
+        <form action="/base/calculatorResult">
+            <div class="base_form ">
+                <label for="radix">From Base</label>
+                <select name="radix" id="radix">
+                    <option value="2">2(binary)</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8(octal)</option>
+                    <option value="9">9</option>
+                    <option value="10" selected>10(decimal)</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16(hex)</option>
+                </select>
+                <label for="number1">First Number</label>
+                <input type="text" name="number1" id="number1" required value={{number1}}>
+                <label for="operator">Select Operator</label>
+                <select name="operator" id="operator">
+                    <option value="plus" selected>+</option>
+                    <option value="minus">-</option>
+                    <option value="multiply">*</option>
+                    <option value="divide">/</option>
+                </select>
+                <label for="number2">Second Number</label>
+                <input type="text" name="number2" id="number2" required value={{number2}}>
+                <div>
+                    <button type="submit">
+                        <pre><b>=</b>  Calculate</pre>
+                    </button>
+                    <button type="button" id="reset">
+                        <pre><b>x</b>  Reset</pre>
+                    </button>
+                </div>
+                <label for="output">Result</label>
+                <input type="text" id="output" name="output" disabled value={{output}}>
+                <div>
+                    <button type="button" id="copy">Copy</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<!-- keep the values of radix and convert -->
+{% if radix or operator %}
+<script>
+    document.getElementById('radix').value = '{{radix}}';
+    document.getElementById('operator').value = '{{operator}}';
+</script>
+{% endif %}
+
+<!-- reset the values -->
+<script>
+    document.getElementById('reset').addEventListener('click', () => {
+        document.getElementById('number1').value = "";
+        document.getElementById('number2').value = "";
+        document.getElementById('radix').value = "10";
+        document.getElementById('operator').value = "plus";
+        document.getElementById('output').value = "";
+    })
+    document.getElementById('copy').addEventListener('click', () => {
+        let text = document.getElementById('output').value;
+        if (text) {
+            navigator.clipboard.writeText(text);
+        }
+
+    })
+</script>
+{% endblock%}

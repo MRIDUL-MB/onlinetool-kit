@@ -248,35 +248,35 @@ hr {
   }
 }
 
-.frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output {
+.frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator {
   border: none;
   width: 60%;
-  height: 9vh;
+  height: 7.5vh;
   margin: 1rem 0rem;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 1rem;
 }
 
 @media screen and (max-width: 1000px) {
-  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output {
+  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator {
     width: 90%;
     height: 6vh;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output {
-    font-size: 0.75rem;
+  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator {
+    font-size: 0.5rem;
     width: 100%;
-    height: 5vh;
+    height: 4.5vh;
   }
 }
 
 .frame .base_form #output {
-  height: 12vh;
+  height: 10vh;
   font-size: 2rem;
   background-color: #dcdbdb;
 }
