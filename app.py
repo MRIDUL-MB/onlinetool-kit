@@ -36,7 +36,7 @@ def base():
 @app.route('/base/result')
 def base_output():
     number = request.args.get('number')
-    num = list(number.upper())
+    num = number.upper()
     radix = int(request.args.get('radix'))
     convert = int(request.args.get('convert'))
     if check(num, radix):
@@ -55,9 +55,9 @@ def base_calculator_page():
 @app.route('/base/calculatorResult')
 def base_calculation():
     number1 = request.args.get('number1')
-    num1 = list(number1.upper())
+    num1 = number1.upper()
     number2 = request.args.get('number2')
-    num2 = list(number2.upper())
+    num2 = number2.upper()
     radix = int(request.args.get('radix'))
     operator = request.args.get('operator')
 
