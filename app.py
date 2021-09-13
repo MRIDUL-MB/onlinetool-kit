@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 from library.pdf_converter import text_pdf, file_pdf
 from library.base import base_result, check, base_calculator
+from library.video_downloader import check_path
 
 app = Flask(__name__)
 
@@ -67,6 +68,17 @@ def base_calculation():
     else:
         message = "Check the number and base"
     return render_template('base_calculator.html', message=message, number1=number1, number2=number2, radix=radix, operator=operator)
+
+
+@app.route('/youTube')
+def you_tube():
+    return render_template('youtube.html')
+
+
+@app.route('/youTube/download')
+def download_video():
+    result = check_path()
+    return render_template('youtube.html', result=result)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,12 @@
+{% extends 'template.html' %}
+
+{% block title %}Download Video{% endblock %}
+
+{% block content %}
+<form action="/youTube/download">
+    <label for="link">Enter the Link:-</label>
+    <input type="text" name="link" id="link">
+    <button type="submit">Download</button>
+    <p>{{result}}</p>
+</form>
+{% endblock %}
