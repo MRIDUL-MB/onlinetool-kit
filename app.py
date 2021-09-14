@@ -5,8 +5,7 @@ from werkzeug.wrappers import response
 from library.pdf_converter import text_pdf, file_pdf
 from library.base import base_result, check, base_calculator
 from library.video_downloader import downloader
-import json
-import requests
+
 
 app = Flask(__name__)
 

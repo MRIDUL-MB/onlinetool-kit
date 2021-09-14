@@ -1,7 +1,4 @@
-from pytube import YouTube
 import youtube_dl
-from youtube_dl import options
-from flask import jsonify
 
 
 def downloader(link):
