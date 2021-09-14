@@ -6,7 +6,9 @@
 <form action="/youTube/download">
     <label for="link">Enter the Link:-</label>
     <input type="text" name="link" id="link">
-    <button type="submit">Download</button>
-    <p>{{result}}</p>
+    <button type="submit">submit</button><br>
+    <!-- <p>{{result}}</p> -->
+    <video controls src={{result}} id="video" width="500" height="250">
+        <a href={{result}} download="ideo">dgd</a>
 </form>
 {% endblock %}

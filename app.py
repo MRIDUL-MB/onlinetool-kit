@@ -1,9 +1,12 @@
 import re
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
+from werkzeug.wrappers import response
 from library.pdf_converter import text_pdf, file_pdf
 from library.base import base_result, check, base_calculator
-from library.video_downloader import check_path
+from library.video_downloader import downloader
+import json
+import requests
 
 app = Flask(__name__)
 
@@ -77,7 +80,9 @@ def you_tube():
 
 @app.route('/youTube/download')
 def download_video():
-    result = check_path()
+    link = request.args.get("link")
+    result = downloader(link)
+
     return render_template('youtube.html', result=result)
 
 
