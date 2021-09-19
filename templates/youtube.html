@@ -1,14 +1,46 @@
 {% extends 'template.html' %}
 
-{% block title %}Download Video{% endblock %}
+{% block title %}Downloader{% endblock %}
 
 {% block content %}
-<form action="/youTube/download">
-    <label for="link">Enter the Link:-</label>
-    <input type="text" name="link" id="link">
-    <button type="submit">submit</button><br>
-    <!-- <p>{{result}}</p> -->
-    <video controls src={{result}} id="video" width="500" height="250">
-        <a href={{result}} download="ideo">dgd</a>
-</form>
+<main class="youtube_main">
+    <div class="header">
+        <h2>Youtube Downloader</h2>
+    </div>
+
+    <div>
+        <form action="/youTube/download">
+            <div class="youtube_form">
+                <label for="link">Enter the Link:-</label>
+
+                <input type="text" name="link" id="link" placeholder="Paste the link here!" value={{link}}>
+                <select name="genre" id="genre">
+                    <option value="video" selected>Video</option>
+                    <option value="audio">Audio</option>
+                </select>
+                <div>
+                    <button id="youtube_button" type="submit">submit</button>
+                </div>
+                {% if result and genre == "video" %}
+                <video controls id="video" src={{result}}></video>
+                {% endif %}
+                {% if result and genre == "audio" %}
+                <audio controls id="audio" src={{result}}></audio>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+    <div style="all: initial; text-align:center">
+        <h2>How to download</h2><br>
+        <p>:- On Desktop, <br> <b>Right Click</b> on the video > Click on the <b>Save Video As</b> button</p>
+        <br>
+        <p>:- On Mobile Devices, <br> <b>Hold</b> on the video > Tap on <b>Download</b></p>
+    </div>
+</main>
+{% if genre %}
+<script>
+    let genre = document.getElementById('genre');
+    genre.value = '{{genre}}';
+</script>
+{% endif %}
 {% endblock %}

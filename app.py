@@ -20,14 +20,14 @@ def upload_files():
     if request.method == 'POST':
         f = request.files['file']
         f.save(secure_filename(f.filename))
-        result = file_pdf(f.filename)
+        file_pdf(f.filename)
         return render_template('download.html')
 
 
 @app.route('/download/pdf')
 def pdf():
     text = request.args.get('text')
-    result = text_pdf(text)
+    text_pdf(text)
     return render_template("download.html")
 
 
@@ -80,9 +80,10 @@ def you_tube():
 @app.route('/youTube/download')
 def download_video():
     link = request.args.get("link")
-    result = downloader(link)
+    genre = request.args.get("genre")
+    result = downloader(link, genre)
 
-    return render_template('youtube.html', result=result)
+    return render_template('youtube.html', result=result, link=link, genre=genre)
 
 
 if __name__ == '__main__':

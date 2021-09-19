@@ -52,7 +52,7 @@ nav ul li:hover {
 
 @media screen and (max-width: 600px) {
   nav ul li {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -89,7 +89,7 @@ hr {
 }
 
 .frame div {
-  margin: 1rem 1rem;
+  margin: 5rem 1rem;
   display: block;
 }
 
@@ -248,7 +248,7 @@ hr {
   }
 }
 
-.frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator {
+.frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator, .frame .base_form #genre {
   border: none;
   width: 60%;
   height: 7.5vh;
@@ -259,7 +259,7 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
-  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator {
+  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator, .frame .base_form #genre {
     width: 90%;
     height: 6vh;
     padding: 0 0.5rem;
@@ -268,7 +268,7 @@ hr {
 }
 
 @media screen and (max-width: 600px) {
-  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator {
+  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator, .frame .base_form #genre {
     font-size: 0.5rem;
     width: 100%;
     height: 4.5vh;
@@ -379,5 +379,158 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.download_page a {
+  outline: none;
+}
+
+.fas {
+  margin-top: 5rem;
+  font-size: 10rem;
+  color: #f5afaf;
+  -webkit-transition: font-size 0.2s ease-in-out;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.fas:hover {
+  font-size: 11rem;
+  color: #fc9595;
+}
+
+.youtube_main {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  margin: 5rem;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .youtube_main {
+    margin: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.youtube_main .youtube_form {
+  padding: 2rem;
+  border: 2px solid black;
+  background: #f5afaf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .youtube_main .youtube_form {
+    row-gap: 1rem;
+  }
+}
+
+.youtube_main .youtube_form #link {
+  border: none;
+  width: 40%;
+  height: 5vh;
+  margin: 1rem 0rem;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .youtube_main .youtube_form #link {
+    width: 60%;
+    height: 5vh;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .youtube_main .youtube_form #link {
+    font-size: 0.75rem;
+    width: 100%;
+    height: 4.5vh;
+  }
+}
+
+.youtube_main .youtube_form #youtube_button {
+  border: none;
+  width: 10vw;
+  height: 6vh;
+  font-size: 1rem;
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.youtube_main .youtube_form #youtube_button:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .youtube_main .youtube_form #youtube_button {
+    height: 7vh;
+    font-size: 1rem;
+    width: 10vw;
+    padding: revert;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .youtube_main .youtube_form #youtube_button {
+    width: 20vw;
+    height: 5vh;
+    font-size: 1rem;
+  }
+}
+
+.youtube_main .youtube_form #video {
+  width: 62vw;
+  height: 40vh;
+}
+
+@media screen and (max-width: 600px) {
+  .youtube_main .youtube_form #video {
+    height: 40vh;
+  }
+}
+
+#genre {
+  border: none;
+  width: auto;
+  height: 7.5vh;
+  margin: 1rem 0rem;
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  #genre {
+    height: 6vh;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #genre {
+    height: 4.5vh;
+  }
 }
 /*# sourceMappingURL=main.min.css.map */
