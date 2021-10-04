@@ -15,6 +15,11 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/textpdf')
+def textpdf():
+    return render_template('pdfConverter.html')
+
+
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_files():
     if request.method == 'POST':

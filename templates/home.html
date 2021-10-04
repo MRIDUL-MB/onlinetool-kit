@@ -1,31 +1,18 @@
 {% extends 'template.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Tools{% endblock %}
 
 {% block content%}
-<div class="header">
-    <h1>Convert Text to PDF</h1>
+<div class="home">
+
+    <a href="/textpdf"><b>Text to PDF</b></a>
+
+    <a href="/base"><b>Base Converter</b></a>
+
+    <a href="/base/calculator"><b>Base Calculator</b></a>
+
+    <a href="/youTube"><b>Youtube Downloader</b></a>
+
+
 </div>
-<div class="frame">
-    <div>
-        <h3>Text to PDF</h3>
-        <form action="/download/pdf">
-            <textarea required name="text" id="text" cols="100" rows="20" wrap="hard"></textarea>
-            <br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <hr>
-    <br>
-    <div class="pdf_form">
-        <h3>Text file to PDF</h3>
-        <form action="/upload" method="POST" enctype="multipart/form-data">
-            <label for="file" id="file-label">Select a file</label>
-            <input type="file" name="file" id="file" required>
-            <br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-</div>
-<br>
-{% endblock %}
+{% endblock %}'
