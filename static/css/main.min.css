@@ -8,7 +8,6 @@
 
 body {
   width: 100%;
-  height: 100vh;
   margin-bottom: 10rem;
   background: whitesmoke;
   font-family: 'Zilla Slab', serif;
@@ -392,15 +391,14 @@ hr {
 }
 
 .fas {
-  margin-top: 5rem;
-  font-size: 10rem;
+  font-size: 8rem;
   color: #f5afaf;
   -webkit-transition: font-size 0.2s ease-in-out;
   transition: font-size 0.2s ease-in-out;
 }
 
 .fas:hover {
-  font-size: 11rem;
+  font-size: 9rem;
   color: #fc9595;
 }
 

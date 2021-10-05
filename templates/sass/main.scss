@@ -23,7 +23,7 @@
 }
 body {
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     margin-bottom: 10rem;
     background: whitesmoke;
     font-family: 'Zilla Slab',
@@ -289,12 +289,12 @@ hr{
     
 }
 .fas{
-    margin-top: 5rem;
-    font-size: 10rem;
+    
+    font-size: 8rem;
     color: rgb(245, 175, 175);
     transition: font-size 0.2s ease-in-out;
     &:hover{
-        font-size:11rem;
+        font-size:9rem;
         color: rgb(252, 149, 149);
     }
 }
