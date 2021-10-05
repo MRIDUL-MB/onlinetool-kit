@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;1,500&display=swap");
 * {
-  padding: 0;
-  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  width: 100%;
-  margin-bottom: 10rem;
-  background: whitesmoke;
+  background: #e4dedefb;
   font-family: 'Zilla Slab', serif;
 }
 
@@ -38,14 +35,14 @@ nav ul a {
 }
 
 nav ul li {
-  color: whitesmoke;
+  color: white;
   padding: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
 }
 
 nav ul li:hover {
-  background-color: whitesmoke;
+  background-color: white;
   color: black;
 }
 
@@ -85,7 +82,6 @@ hr {
 @media screen and (max-width: 700px) {
   .header {
     font-size: 1.25rem;
-    margin: 1.5rem;
   }
 }
 
@@ -148,7 +144,7 @@ hr {
   padding: 0.6em 0.8em;
   font: 0.9em Lato, Helvetica, sans-serif;
   border-radius: 1rem;
-  border: 1px solid  black;
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 700px) {
@@ -158,10 +154,10 @@ hr {
 }
 
 .frame div form input[type=submit] {
-  border: 1px solid white;
+  border: 1px solid whitesmoke;
   display: block;
   background-color: black;
-  color: whitesmoke;
+  color: white;
   width: 10rem;
   height: 3rem;
   font-size: 1.75rem;
@@ -171,7 +167,7 @@ hr {
 
 .frame div form input[type=submit]:hover {
   border: 1px solid black;
-  background-color: whitesmoke;
+  background-color: white;
   color: black;
 }
 
@@ -190,10 +186,10 @@ hr {
 .frame div form #file-label {
   padding-top: 5px;
   text-align: center;
-  border: 1px solid white;
+  border: 1px solid --white;
   display: block;
   background-color: #1c65ec;
-  color: whitesmoke;
+  color: white;
   width: 15rem;
   height: 3.5rem;
   font-size: 2rem;
@@ -203,7 +199,7 @@ hr {
 
 .frame div form #file-label:hover {
   border: 1px solid black;
-  background-color: whitesmoke;
+  background-color: white;
   color: #1c65ec;
 }
 
@@ -253,10 +249,17 @@ hr {
   }
 }
 
-.frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator, .frame .base_form #genre {
+.frame .base_form #number,
+.frame .base_form #radix,
+.frame .base_form #convert,
+.frame .base_form #output,
+.frame .base_form #number1,
+.frame .base_form #number2,
+.frame .base_form #operator,
+.frame .base_form #genre {
   border: none;
   width: 60%;
-  height: 7.5vh;
+  height: 2.75rem;
   margin: 1rem 0rem;
   border-radius: 1rem;
   padding: 0 1rem;
@@ -264,37 +267,44 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
-  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator, .frame .base_form #genre {
+  .frame .base_form #number,
+  .frame .base_form #radix,
+  .frame .base_form #convert,
+  .frame .base_form #output,
+  .frame .base_form #number1,
+  .frame .base_form #number2,
+  .frame .base_form #operator,
+  .frame .base_form #genre {
     width: 90%;
-    height: 6vh;
+    height: 2.5rem;
     padding: 0 0.5rem;
     font-size: 0.75rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .frame .base_form #number, .frame .base_form #radix, .frame .base_form #convert, .frame .base_form #output, .frame .base_form #number1, .frame .base_form #number2, .frame .base_form #operator, .frame .base_form #genre {
+  .frame .base_form #number,
+  .frame .base_form #radix,
+  .frame .base_form #convert,
+  .frame .base_form #output,
+  .frame .base_form #number1,
+  .frame .base_form #number2,
+  .frame .base_form #operator,
+  .frame .base_form #genre {
     font-size: 0.75rem;
     width: 100%;
-    height: 4.5vh;
   }
 }
 
 .frame .base_form #output {
-  height: 10vh;
+  height: 3.5rem;
   font-size: 2rem;
   background-color: #dcdbdb;
 }
 
 @media screen and (max-width: 1000px) {
   .frame .base_form #output {
-    height: 8vh;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .frame .base_form #output {
-    height: 8vh;
+    height: 3rem;
   }
 }
 
@@ -332,30 +342,31 @@ hr {
 .frame .base_form div button {
   border: none;
   width: 10vw;
-  height: 6vh;
+  height: 3rem;
   font-size: 1rem;
   background-color: black;
-  color: whitesmoke;
+  color: white;
   cursor: pointer;
   border-radius: 0.25rem;
 }
 
 .frame .base_form div button:hover {
-  background-color: whitesmoke;
+  background-color: white;
   color: black;
 }
 
 @media screen and (max-width: 1000px) {
   .frame .base_form div button {
-    height: 5vh;
+    height: 2.75rem;
     font-size: 1rem;
-    width: auto;
+    width: 13vw;
     padding: revert;
   }
 }
 
 @media screen and (max-width: 600px) {
   .frame .base_form div button {
+    height: 2.5rem;
     width: 40%;
     font-size: 1rem;
   }
@@ -384,20 +395,21 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: auto;
 }
 
 .download_page a {
   outline: none;
 }
 
-.fas {
+.download_page a .fas {
   font-size: 8rem;
   color: #f5afaf;
   -webkit-transition: font-size 0.2s ease-in-out;
   transition: font-size 0.2s ease-in-out;
 }
 
-.fas:hover {
+.download_page a .fas:hover {
   font-size: 9rem;
   color: #fc9595;
 }
@@ -414,6 +426,7 @@ hr {
   .youtube_main {
     margin: 2rem;
     font-size: 1.5rem;
+    gap: 1rem;
   }
 }
 
@@ -446,7 +459,7 @@ hr {
 .youtube_main .youtube_form #link {
   border: none;
   width: 40%;
-  height: 5vh;
+  height: 3rem;
   margin: 1rem 0rem;
   border-radius: 1rem;
   padding: 0 1rem;
@@ -456,7 +469,7 @@ hr {
 @media screen and (max-width: 1000px) {
   .youtube_main .youtube_form #link {
     width: 60%;
-    height: 5vh;
+    height: 2.5rem;
     padding: 0 0.5rem;
     font-size: 0.75rem;
   }
@@ -466,29 +479,29 @@ hr {
   .youtube_main .youtube_form #link {
     font-size: 0.75rem;
     width: 100%;
-    height: 4.5vh;
+    height: 2.25rem;
   }
 }
 
 .youtube_main .youtube_form #youtube_button {
   border: none;
   width: 10vw;
-  height: 6vh;
+  height: 3rem;
   font-size: 1rem;
   background-color: black;
-  color: whitesmoke;
+  color: white;
   cursor: pointer;
   border-radius: 0.25rem;
 }
 
 .youtube_main .youtube_form #youtube_button:hover {
-  background-color: whitesmoke;
+  background-color: white;
   color: black;
 }
 
 @media screen and (max-width: 1000px) {
   .youtube_main .youtube_form #youtube_button {
-    height: 7vh;
+    height: 2.5rem;
     font-size: 1rem;
     width: 10vw;
     padding: revert;
@@ -498,19 +511,19 @@ hr {
 @media screen and (max-width: 600px) {
   .youtube_main .youtube_form #youtube_button {
     width: 20vw;
-    height: 5vh;
+    height: 2.25rem;
     font-size: 1rem;
   }
 }
 
 .youtube_main .youtube_form #video {
   width: 62vw;
-  height: 40vh;
+  height: 25rem;
 }
 
 @media screen and (max-width: 600px) {
   .youtube_main .youtube_form #video {
-    height: 40vh;
+    height: 15rem;
   }
 }
 
@@ -523,7 +536,7 @@ hr {
 #genre {
   border: none;
   width: auto;
-  height: 7.5vh;
+  height: 2.5rem;
   margin: 1rem 0rem;
   border-radius: 0.3rem;
   padding: 0 1rem;
@@ -532,7 +545,7 @@ hr {
 
 @media screen and (max-width: 1000px) {
   #genre {
-    height: 6vh;
+    height: 2.25rem;
     padding: 0 0.5rem;
     font-size: 0.75rem;
   }
@@ -540,13 +553,13 @@ hr {
 
 @media screen and (max-width: 600px) {
   #genre {
-    height: 4.5vh;
+    height: 2rem;
   }
 }
 
 .home {
   margin: 2rem auto;
-  width: 50%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,7 +573,7 @@ hr {
 }
 
 .home a {
-  cursor: pointer;
+  border-radius: 0.5rem;
   width: 100%;
   padding: 1.5rem;
   text-align: center;
@@ -580,7 +593,7 @@ hr {
 
 @media screen and (max-width: 600px) {
   .home a {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 0.75rem;
   }
 }
@@ -592,16 +605,17 @@ hr {
 
 .tools {
   display: block;
-  width: 100%;
-  padding: 1.5rem;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 0.5rem;
   background: black;
   font-size: 2rem;
+  border-radius: .5rem;
 }
 
 @media screen and (max-width: 1000px) {
   .tools {
     font-size: 1.25rem;
-    padding: 1rem;
   }
 }
 
@@ -612,6 +626,8 @@ hr {
 }
 
 .tools a {
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
   margin: auto;
   text-align: center;
   display: block;
@@ -624,5 +640,41 @@ hr {
 .tools a:hover {
   background-color: white;
   color: black;
+}
+
+.footer {
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  margin: 0.5rem auto;
+  margin-top: 30vh;
+  word-spacing: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    margin-top: 20vh;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+.fa-heart {
+  color: red;
 }
 /*# sourceMappingURL=main.min.css.map */

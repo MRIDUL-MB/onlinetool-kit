@@ -13,13 +13,13 @@
             <div class="youtube_form">
                 <label for="link">Enter the Link:-</label>
 
-                <input type="text" name="link" id="link" placeholder="Paste the link here!" value={{link}}>
+                <input type="text" name="link" id="link" placeholder="Paste the link here!" value={{link}} required>
                 <select name="genre" id="genre">
                     <option value="video" selected>Video</option>
                     <option value="audio">Audio</option>
                 </select>
                 <div>
-                    <button id="youtube_button" type="submit">submit</button>
+                    <button id="youtube_button" type="submit">Search</button>
                 </div>
                 {% if result and genre == "video" %}
                 <video controls id="video" src={{result}}></video>

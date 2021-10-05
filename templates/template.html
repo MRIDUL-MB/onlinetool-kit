@@ -5,8 +5,7 @@
     {% block head %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <!-- <link rel="stylesheet" href="../src/css/main.min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../static/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -16,7 +15,26 @@
 </head>
 
 <body>
-    <!-- <nav>
+
+    <div class="tools">
+        <a href="/">Tools</a>
+    </div>
+    {% block content %}{% endblock %}
+    <footer class="tools footer">
+        <div>
+            <p>Made with <i class="fas fa-heart"></i> by Mridul <i class="fas fa-copyright"></i> 2021</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+<!-- <nav>
         <div>
             <ul>
                 <a href="/textpdf">
@@ -34,10 +52,3 @@
             </ul>
         </div>
     </nav> -->
-    <div class="tools">
-        <a href="/">Tools</a>
-    </div>
-    {% block content %}{% endblock %}
-</body>
-
-</html>
