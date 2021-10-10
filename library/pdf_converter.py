@@ -1,12 +1,8 @@
 from fpdf import FPDF
 import os
-# from datetime import datetime as dt
 
 
 def text_pdf(x):
-    # now = dt.now()
-    # date = str(dt.timestamp(now)).replace(".", "")
-    # path = date + ".txt"
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=18)
