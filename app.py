@@ -3,6 +3,7 @@ from werkzeug.utils import secure_filename
 from library.pdf_converter import text_pdf, file_pdf
 from library.base import base_result, check, base_calculator
 from library.video_downloader import downloader
+import os
 
 
 app = Flask(__name__)
@@ -108,4 +109,4 @@ def download_video():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3001, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 3001)), debug=True)
